@@ -13,7 +13,7 @@ if (numberM < 1 || numberN < 1)
     Console.WriteLine("Некорректный ввод!");
     return;
 }
-
+          
 int SumDigit(int numM, int numN)
 {
     int sum = 0;
@@ -25,7 +25,7 @@ int SumDigit(int numM, int numN)
     }
 
     else
-    {
+    {   
         sum += numM;
         if (numM == numN) return sum;
         return sum + SumDigit(numM - 1, numN);
@@ -36,3 +36,4 @@ int sum1 = SumDigit(numberM, numberN);
 
 Console.WriteLine($"M = {numberM}; N = {numberN} -> {sum1}");
 
+// Я так и не смог сделать без переменной "sum". Если не сложно напишите код.
