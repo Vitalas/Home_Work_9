@@ -13,27 +13,22 @@ if (numberM < 1 || numberN < 1)
     Console.WriteLine("Некорректный ввод!");
     return;
 }
-          
+
 int SumDigit(int numM, int numN)
 {
-    int sum = 0;
     if (numM < numN)
     {
-        sum += numM;
-        if (numM == numN) return sum;
-        return sum + SumDigit(numM + 1, numN);
+        if (numM == numN) return numN;
+        return numM + SumDigit(numM + 1, numN);
     }
 
     else
-    {   
-        sum += numM;
-        if (numM == numN) return sum;
-        return sum + SumDigit(numM - 1, numN);
+    {
+        if (numM == numN) return numN;
+        return numM + SumDigit(numM - 1, numN);
     }
 }
 
-int sum1 = SumDigit(numberM, numberN);
+int sum = SumDigit(numberM, numberN);
 
-Console.WriteLine($"M = {numberM}; N = {numberN} -> {sum1}");
-
-// Я так и не смог сделать без переменной "sum". Если не сложно напишите код.
+Console.WriteLine($"M = {numberM}; N = {numberN} -> {sum}");
