@@ -11,14 +11,14 @@ if (number < 1)
     Console.WriteLine("Некорректный ввод!");
     return;
 }
-Console.Write($"N = {number} -> \"");
+
 void PrintNaturalNumbers(int num)
 {
-    int number1 = number;
     if (num == 1) return;
     Console.Write($"{num}, ");
     PrintNaturalNumbers(num - 1);
 }
 
+Console.Write($"N = {number} -> \"");
 PrintNaturalNumbers(number);
 Console.WriteLine("1\"");
